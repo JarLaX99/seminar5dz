@@ -7,7 +7,7 @@ void main()
     int sizeArray = Readint("Введите размер массива: ");
     int[] array = FillArray(sizeArray);
     PrintArray(array);
-    PrintResult(NumberEven(array));
+    NumberEven(array);
 }
 
 int[] FillArray(int size = 10, int leftRange = 100, int rightRange = 1000)
@@ -33,18 +33,6 @@ int NumberEven(int[] arr)
             result++;
         }
     }
-    return result;
-}
-int Readint(string text)
-{
-    System.Console.Write(text);
-    return Convert.ToInt32(Console.ReadLine());
-}
-
-void PrintArray(int[] arrayForPrint)
-{
-    System.Console.WriteLine("[" + string.Join("] [", arrayForPrint) + "]");
-}
 
 void PrintResult(int NumberEven)
 {
@@ -64,6 +52,19 @@ void PrintResult(int NumberEven)
     {
         System.Console.WriteLine("Четных чисел нет");
     }
+} 
+PrintResult(result);
+return result;
 }
 
+int Readint(string text)
+{
+    System.Console.Write(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+void PrintArray(int[] arrayForPrint)
+{
+    System.Console.WriteLine("[" + string.Join("] [", arrayForPrint) + "]");
+}
 main();
